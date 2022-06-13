@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Portal</defName>
+    <label>Portal</label>
+    <description>A portal,if it linked other portal,it can transmit some things around it to other portal.</description>
+    <thingClass>PortalLibrary.Portal_Building</thingClass>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Portal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+    </graphicData>
+    <comps>
+      <li>
+        <compClass>PortalLibrary.CompPortal</compClass>
+      </li>
+    </comps>
+    <passability>Standable</passability>
+    <drawerType>RealtimeOnly</drawerType>
+    <designationCategory>Misc</designationCategory>
+    <size>(5,5)</size>
+    <pathCost>42</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <tickerType>Normal</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+    <statBases>
+      <WorkToBuild>2400</WorkToBuild>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MeditationFocusStrength>0.10</MeditationFocusStrength>
+      <Beauty>0</Beauty>
+      <Mass>10</Mass>
+    </statBases>
+    <costList>
+      <Steel>500</Steel>
+      <Gold>1</Gold>
+      <Plasteel>30</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>PortalLibrary.Verb_Link</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_DoomsdayRocket</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>50</range>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetBuildings>true</canTargetBuildings>
+        </targetParams>
+      </li>
+    </verbs>
+    <costStuffCount>60</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>true</blockWind>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+  </ThingDef>
+
+</Defs> 
